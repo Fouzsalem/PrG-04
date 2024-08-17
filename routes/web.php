@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\ContactMessageController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,3 +52,7 @@ Route::get('/edit2/{id}',[ServicesController::class,'edit2']);
 Route::put('/update2/{id}',[ServicesController::class,'update2']);
 
 Route::delete('/del2/{id}',[ServicesController::class,'del2']);
+
+
+Route::post('/contact', [ContactMessageController::class, 'store'])->name('contact.store');
+Route::get('/dashboard/messages', [ContactMessageController::class, 'index'])->name('dashboard.messages.index');
