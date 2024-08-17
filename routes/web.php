@@ -8,6 +8,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
+
+Route::get('/client', function () {
+    return view('clientt');
+});
+
 
 Route::get('/insert', function () {
     return view('input');
