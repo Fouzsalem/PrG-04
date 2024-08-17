@@ -11,14 +11,14 @@
 </head>
 <body dir="rtl">
 @method('PUT')
-@include('nav')
+@include('nav2')
 <h1>صفحة التعديل</h1>
 <form  enctype="multipart/form-data" class="p-3 m-3"dir="rtl"  action="/update2/{{$ser->id}}" method="POST">
   @method('PUT')
 	@csrf
   <div class="mb-3">
     <label class="form-label">اسم العميل</label>
-    <input type="TEXT" class="form-control" name="tti" placeholder="{{$ser->Title}}" >
+    <input type="TEXT" class="form-control" name="title" placeholder="{{$ser->Title}}" >
   
  <div class="mb-3">
     <label  class="form-label">صوره</label>

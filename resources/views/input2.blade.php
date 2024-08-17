@@ -10,13 +10,13 @@
 
 </head>
 <body dir="rtl">
-@include('nav')
+@include('nav2')
 <h1>صفحة الادخال</h1>
 <form  enctype="multipart/form-data" class="p-3 m-3"dir="rtl"  action="/insert2" method="POST">
 	@csrf
   <div class="mb-3">
     <label class="form-label">العنوان</label>
-    <input type="TEXT" class="form-control" name="tti" >
+    <input type="TEXT" class="form-control" name="title" >
    
  <div class="mb-3">
     <label  class="form-label">صوره</label>

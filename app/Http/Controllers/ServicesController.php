@@ -9,12 +9,12 @@ class ServicesController extends Controller
 
 public function insert2(Request $request){
 
-      $imagge='image_'.uniqid().'.'.$request->immi->extension();
-      $request->immi->move(public_path('image'),$imagge);
+    $imagge='image_'.uniqid().'.'.$request->immi->extension();
+    $request->immi->move(public_path('image'),$imagge);
 
     $ser = services::create([
-    'Title'=>$request->tti,
-    'image'=>"image/$imagge",
+    'Title'=>$request->title,
+    'image'=>$request->immi,
     'about'=>$request->abb,
 
                    ]);
@@ -23,25 +23,25 @@ public function insert2(Request $request){
      }
 
 
-    public function view2(){
+    public function view2 (){
 
         $ser = services::all();
 
-        return view('serv.view',compact('ser'));
+        return view('view2',compact('ser'));
 
     }
 
 
 
-    public function edit2($id){
+    public function edit2 ($id){
 
         $ser = services::findorFail($id);
  
-        return view('serv.edit',compact('ser'));
+        return view('edit2',compact('ser'));
 
     }
 
-    public function update2(Request $request,$id){
+    public function update2 (Request $request,$id){
 
          $imagge='image_'.uniqid().'.'.$request->immi->extension();
       $request->imi->move(public_path('image'),$imagge);
@@ -50,15 +50,15 @@ public function insert2(Request $request){
         $ser = services::findorFail($id);
  
         $ser->update2([
-
-         'Title'=>$request->tti,
-         'image'=>"image/$imagge",
+  //  $service->Title = $request->title
+         'Title'=>$request->title,
+         'image'=>$request->immi,
          'about'=>$request->abb,
 
         ]);
 
 
-        return redirect('serv.view');
+        return redirect('view2');
     }
 
 
@@ -67,7 +67,7 @@ public function insert2(Request $request){
 
         services::findorFail($id)->delete();
         
-         return redirect('serv.view');
+         return redirect('view2');
 
 
     }

@@ -29,12 +29,16 @@ Route::delete('/del/{id}',[ClientsController::class,'del']);
 
 
 
-Route::get('/view2',[ServicesController::class,'serv.view']);
+Route::get('/view2',[ServicesController::class,'view2']);
 
-Route::post('/insert2',[ServicesController::class,'serv.insert']);
 
-Route::get('/edit2/{id}',[ServicesController::class,'serv.edit']);
+Route::get('/insert2', function () {
+    return view('input2');
+});
 
-Route::put('/update2/{id}',[ServicesController::class,'serv.update']);
+Route::post('/insert2',[ServicesController::class,'insert2']);
+Route::get('/edit2/{id}',[ServicesController::class,'edit2']);
 
-Route::delete('/del2/{id}',[ServicesController::class,'serv.del']);
+Route::put('/update2/{id}',[ServicesController::class,'update2']);
+
+Route::delete('/del2/{id}',[ServicesController::class,'del2']);

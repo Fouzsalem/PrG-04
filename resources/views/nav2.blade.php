@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/insert">ادخال</a>
+          <a class="nav-link active" aria-current="page" href="/insert2">ادخال</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/view">عرض</a>
+          <a class="nav-link" href="/view2">عرض</a>
         </li>
         
 

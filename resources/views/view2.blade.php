@@ -9,7 +9,7 @@
 
 </head>
 <body dir="rtl">
-@include('nav')
+@include('nav2')
 @foreach ($ser as $sr)
 <div class="card p-3 m-3" style="width: 50rem;">
   <img src="{{$sr->image}}" class="card-img-top" alt="...">
