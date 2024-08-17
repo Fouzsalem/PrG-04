@@ -342,15 +342,15 @@ width: 80%;
   width: 80%;
 }
 /* =========================ِ client ===================  */
-#work-us {
+#client-us {
   background-color: #FDF9F4;
  }
- #work-us p {
+ #client-us p {
   font-size: 25px;
   color: #cf5819;
   padding-top: 10px;
  }
- .services-list {
+ .client-list {
   display: grid;
    grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
    
@@ -360,7 +360,7 @@ width: 80%;
  
  
  }
- .services-list div {
+ .client-list div {
 
  padding: 40px;
  font-size: 13px;
@@ -370,13 +370,13 @@ width: 80%;
 } 
 
 
-.services-list div h2 {
+.client-list div h2 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 5px;
 
 }
-.services-item  img{
+.client-item  img{
   width: 80%;
 }
 
@@ -389,9 +389,12 @@ width: 80%;
     font-weight: 300px;
     padding: 20px;
   }
-
+/* footer */
   .copyright a {
     color: var(--black-color);
+  }
+  .sub-title {
+    color:  #885B3A; 
   }
 
 /* Navigation for mobile devices */
