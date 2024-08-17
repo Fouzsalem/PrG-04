@@ -12,7 +12,7 @@
 <body dir="rtl">
 @include('nav2')
 <h1>صفحة الادخال</h1>
-<form  enctype="multipart/form-data" class="p-3 m-3"dir="rtl"  action="/insert2" method="POST">
+<form  enctype="multipart/form-data" class="p-3 m-3"dir="rtl"  action="/insert2" method="post">
 	@csrf
   <div class="mb-3">
     <label class="form-label">العنوان</label>

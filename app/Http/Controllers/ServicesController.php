@@ -14,7 +14,7 @@ public function insert2(Request $request){
 
     $ser = services::create([
     'Title'=>$request->title,
-    'image'=>$request->immi,
+    'image'=>"image/$imagge",
     'about'=>$request->abb,
 
                    ]);
@@ -44,21 +44,21 @@ public function insert2(Request $request){
     public function update2 (Request $request,$id){
 
          $imagge='image_'.uniqid().'.'.$request->immi->extension();
-      $request->imi->move(public_path('image'),$imagge);
+      $request->immi->move(public_path('image'),$imagge);
 
 
         $ser = services::findorFail($id);
  
-        $ser->update2([
-  //  $service->Title = $request->title
+        $ser->update([
+ 
          'Title'=>$request->title,
-         'image'=>$request->immi,
+         'image'=>"image/$imagge",
          'about'=>$request->abb,
 
         ]);
 
 
-        return redirect('view2');
+        return redirect('/view2');
     }
 
 
@@ -67,7 +67,7 @@ public function insert2(Request $request){
 
         services::findorFail($id)->delete();
         
-         return redirect('view2');
+         return redirect('/view2');
 
 
     }

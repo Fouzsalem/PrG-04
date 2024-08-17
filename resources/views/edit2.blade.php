@@ -13,7 +13,7 @@
 @method('PUT')
 @include('nav2')
 <h1>صفحة التعديل</h1>
-<form  enctype="multipart/form-data" class="p-3 m-3"dir="rtl"  action="/update2/{{$ser->id}}" method="POST">
+<form  enctype="multipart/form-data" class="p-3 m-3"dir="rtl"  action="/update2/{{$ser->id}}" method="post">
   @method('PUT')
 	@csrf
   <div class="mb-3">

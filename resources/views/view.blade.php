@@ -20,7 +20,6 @@
 
     <a href="/edit/{{$cl->id}}" class="btn btn-primary">تعديل</a>
 
-  
 <form method="post" action="/del/{{$cl->id}}">
 @method('DELETE')
 @csrf
