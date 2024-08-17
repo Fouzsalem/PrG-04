@@ -51,8 +51,12 @@ Route::get('/edit2/{id}',[ServicesController::class,'edit2']);
 
 Route::put('/update2/{id}',[ServicesController::class,'update2']);
 
+<<<<<<< HEAD
 Route::delete('/del2/{id}',[ServicesController::class,'del2']);
 
 
 Route::post('/contact', [ContactMessageController::class, 'store'])->name('contact.store');
 Route::get('/dashboard/messages', [ContactMessageController::class, 'index'])->name('dashboard.messages.index');
+=======
+Route::delete('/del2/{id}',[ServicesController::class,'del2']);
+>>>>>>> origin/main
